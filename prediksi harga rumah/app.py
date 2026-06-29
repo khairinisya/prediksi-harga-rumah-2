@@ -20,7 +20,10 @@ House Sales in King County menggunakan algoritma Linear Regression.
 # ==========================
 # Dataset otomatis
 # ==========================
-df = pd.read_csv("data.csv")
+import os
+
+path = os.path.join(os.path.dirname(__file__), "data.csv")
+df = pd.read_csv(path)
 st.subheader("Dataset")
 st.dataframe(df.head())
 
